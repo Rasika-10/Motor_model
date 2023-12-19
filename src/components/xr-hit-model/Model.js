@@ -83,7 +83,7 @@ export default function Model(props) {
   const group = useRef();
   const { nodes, materials } = useGLTF("/electric_motor.glb");
 
-  const [temperature] = useState(20); // Initial temperature
+  const [temperature] = useState(70); // Initial temperature
 
   // Set up materials with enhanced shading properties
   materials.parts.color.set("0xffffff"); // Change to white
@@ -99,14 +99,15 @@ export default function Model(props) {
   // Function to determine color based on temperature
   const getBodyColor = () => {
     if (temperature <= 30) {
-      return new THREE.Color(0.6, 0.8, 1).multiplyScalar(3); // Blue
+      return new THREE.Color(0.3, 0.8, 1).multiplyScalar(3); // Blue
     } else if (temperature <= 50) {
       return new THREE.Color(0.69, 0.88, 0.9).multiplyScalar(3); // Powder Blue
     } else if (temperature <= 80) {
       return new THREE.Color(0.56, 0.93, 0.56).multiplyScalar(3); // Light Green
-    } else if (temperature <= 110) {
-      return new THREE.Color(1, 1, 0.8).multiplyScalar(3); // Light Yellow
-    } else {
+    }else if (temperature <= 110) {
+      return new THREE.Color(0xf4c430).multiplyScalar(3); // Yellow (#f4c430)
+    }
+     else {
       return new THREE.Color(0.55, 0, 0).multiplyScalar(3); // Dark Red
     }
   };
