@@ -75,18 +75,27 @@
 
 
 
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
 import * as THREE from 'three';
+import { rdb } from "../../firebaseConfig";
+import { ref,onValue } from 'firebase/database'
 
 export default function Model(props) {
+
+  const [data, setData] = useState([]);
+
+
   const group = useRef();
   const { nodes, materials } = useGLTF("/electric_motor.glb");
 
-  const [temperature] = useState(70); // Initial temperature
+  // const [temperature] = useState(70); // Initial temperature
+
+  const [temperature, setTemperature]=useState('20');
+  const [changer, setChanger]=useState(0);
 
   // Set up materials with enhanced shading properties
-  materials.parts.color.set("0xffffff"); // Change to white
+  materials.parts.color.set("#ffffff"); // Change to white
   materials.closingParts.color.set("#CCCCCC"); // Change to black
 
   // Adjust shading properties for a more vibrant 3D effect
@@ -98,6 +107,10 @@ export default function Model(props) {
 
   // Function to determine color based on temperature
   const getBodyColor = () => {
+
+
+
+
     if (temperature <= 30) {
       return new THREE.Color(0.3, 0.8, 1).multiplyScalar(3); // Blue
     } else if (temperature <= 50) {
@@ -114,6 +127,35 @@ export default function Model(props) {
 
   // Set up the body material with dynamic color based on temperature
   materials.body.color.copy(getBodyColor());
+
+
+
+  useEffect(()=>{
+    const fetchRef = ref(rdb,'motordat/');
+    onValue(fetchRef, (snapshot) =>{
+      const adata = snapshot?.val();
+      const motorData = Object.keys(adata).map(key => ({
+         id: key,
+         ...adata[key] 
+      }));
+      setData(motorData);
+      // if(data.length==0){
+      //   setChanger(changer+1);
+      // }
+       if(data.length>0){
+        setTemperature(data[0].temperature)
+        setChanger(changer+1);
+      }
+      else {
+        setChanger(changer+1);
+      }
+  }
+    
+  );
+
+},[changer]);
+
+
 
   return (
     <group ref={group} {...props} dispose={null}>
@@ -138,6 +180,8 @@ export default function Model(props) {
             geometry={nodes.defaultMaterial_2.geometry}
             material={materials.closingParts}
           />
+
+
         </group>
       </group>
     </group>
