@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import { ARButton,VRButton ,XR } from "@react-three/xr";
+import { ARButton,XR } from "@react-three/xr";
 import XrHitModel from "./XrHitModel";
 
 const XrHitModelContainer = () => {

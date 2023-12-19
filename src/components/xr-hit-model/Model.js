@@ -1,15 +1,15 @@
 
 
 import React, { useRef, useState } from "react";
-import { useGLTF, useAnimations } from "@react-three/drei";
+import { useGLTF} from "@react-three/drei";
 import * as THREE from 'three';
 
 export default function Model(props) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("/electric_motor.glb");
+  const { nodes, materials } = useGLTF("/electric_motor.glb");
   // const { actions } = useAnimations(animations, group);
 
-  const [temperature, setTemperature] = useState(70); // Initial temperature
+  const [temperature] = useState(70); // Initial temperature
 
   // Set up materials with enhanced shading properties
   materials.parts.color.set("0xffffff"); // Change to white
