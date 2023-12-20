@@ -72,21 +72,21 @@ const XrHitModel = () => {
                 <group position={[0, 2, 0]} rotation={[0, -Math.PI / 2, 0]}>
                   {/* Outer Border */}
                   <mesh>
-                    <boxGeometry args={[3.5, 3.5, 0.1]} />
+                    <boxGeometry args={[3.5, 3.5, 0.5]} />
                     <meshStandardMaterial color="black" transparent opacity={0.5} />
                   </mesh>
                   
                   {/* Text Labels and Values */}
-                  <Text position={[0, 0.5, 0]} color="white" fontSize={0.2} textAlign="center">
+                  <Text position={[0, 0.5, 0]} color="white" fontSize={0.1} textAlign="center">
                     Temperature:{data?.temperature} °C
                   </Text>
-                  <Text position={[0, 0.3, 0]} color="white" fontSize={0.2} textAlign="center">
+                  <Text position={[0, 0.3, 0]} color="white" fontSize={0.1} textAlign="center">
                     Voltage: {data?.voltage} V
                   </Text>
-                  <Text position={[0, 0.1, 0]} color="white" fontSize={0.2} textAlign="center">
+                  <Text position={[0, 0.1, 0]} color="white" fontSize={0.1} textAlign="center">
                     Current: {data?.current} A
                   </Text>
-                  <Text position={[0, -0.1, 0]} color="white" fontSize={0.2} textAlign="center">
+                  <Text position={[0, -0.1, 0]} color="white" fontSize={0.1} textAlign="center">
                     Output Power:{data?.outputPower} W
                   </Text>
 
