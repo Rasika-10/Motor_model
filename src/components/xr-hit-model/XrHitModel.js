@@ -78,31 +78,18 @@ const XrHitModel = () => {
                   
                   {/* Text Labels and Values */}
                   <Text position={[0, 0.6, 0]} color="white" fontSize={0.2} textAlign="center">
-                    Temperature:
+                    Temperature:{data?.temperature} °C
                   </Text>
                   <Text position={[0, 0.3, 0]} color="white" fontSize={0.2} textAlign="center">
-                    Voltage:
+                    Voltage: {data?.voltage} V
                   </Text>
                   <Text position={[0, 0, 0]} color="white" fontSize={0.2} textAlign="center">
-                    Current:
+                    Current: {data?.current} A
                   </Text>
                   <Text position={[0, -0.3, 0]} color="white" fontSize={0.2} textAlign="center">
-                    Output Power:
+                    Output Power:{data?.outputPower} W
                   </Text>
 
-                  {/* Values */}
-                  <Text position={[0, 0.6, 0]} color="white" fontSize={0.2} textAlign="center">
-                    {data?.temperature} °C
-                  </Text>
-                  <Text position={[0, 0.3, 0]} color="white" fontSize={0.2} textAlign="center">
-                    {data?.voltage} V
-                  </Text>
-                  <Text position={[0, 0, 0]} color="white" fontSize={0.2} textAlign="center">
-                    {data?.current} A
-                  </Text>
-                  <Text position={[0, -0.3, 0]} color="white" fontSize={0.2} textAlign="center">
-                    {data?.outputPower} W
-                  </Text>
                 </group>
               )}
             </group>
