@@ -72,7 +72,7 @@ const XrHitModel = () => {
                 <group position={[0, 2, 0]} rotation={[0, -Math.PI / 2, 0]}>
                   {/* Outer Border */}
                   <mesh>
-                    <boxGeometry args={[2.9, 1.4, 0.2]} />
+                    <boxGeometry args={[3, 1.4, 0.2]} />
                     <meshStandardMaterial color="black" transparent opacity={0.5} />
                   </mesh>
                   
@@ -86,7 +86,7 @@ const XrHitModel = () => {
                   <Text position={[0, 0.3, 0]} color="white" fontSize={0.2} textAlign="center">
                     Current: {data?.current} A
                   </Text>
-                  <Text position={[0, 0.1, 0]} color="white" fontSize={0.2} textAlign="center">
+                  <Text position={[0, 0, 0]} color="white" fontSize={0.2} textAlign="center">
                     Output Power:{data?.outputPower} W
                   </Text>
 
