@@ -77,7 +77,7 @@ export default function Model(props) {
 
   return (
     <group ref={group} {...props} dispose={null}>
-     <group rotation={[-Math.PI / 2, 0, 0]} scale={[0.8,0.8,0.8]} > {/* Adjust the scale as needed */}
+     <group rotation={[-Math.PI / 2, 0, 0]} scale={[0.6,0.6,0.6]} > {/* Adjust the scale as needed */}
       <group rotation={[Math.PI / 2, 0, 0]} >
           {/* Motor model */}
           <mesh

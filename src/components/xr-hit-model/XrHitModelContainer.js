@@ -53,30 +53,30 @@ const XrHitModelContainer = () => {
 
           {/* Add Text components for labels and values */}
           {/* Labels */}
-          <Text position={[2, 1.8, 0]} color="white" fontSize={0.2} textAlign="left">
+          <Text position={[1, 1.5, 0]} color="white" fontSize={0.14} textAlign="left">
             Temperature:
           </Text>
-          <Text position={[2, 1.5, 0]} color="white" fontSize={0.2} textAlign="left">
+          <Text position={[1, 1.3, 0]} color="white" fontSize={0.14} textAlign="left">
             Voltage:
           </Text>
-          <Text position={[2, 1.2, 0]} color="white" fontSize={0.2} textAlign="left">
+          <Text position={[1, 1.1, 0]} color="white" fontSize={0.14} textAlign="left">
             Current:
           </Text>
-          <Text position={[2, 0.9, 0]} color="white" fontSize={0.2} textAlign="left">
+          <Text position={[1, 0.9, 0]} color="white" fontSize={0.14} textAlign="left">
             Output Power:
           </Text>
 
           {/* Values */}
-          <Text position={[3, 1.8, 0]} color="white" fontSize={0.2} textAlign="left">
+          <Text position={[2, 1.5, 0]} color="white" fontSize={0.14} textAlign="left">
             {defaultData.temperature} °C
           </Text>
-          <Text position={[3, 1.5, 0]} color="white" fontSize={0.2} textAlign="left">
+          <Text position={[2, 1.3, 0]} color="white" fontSize={0.14} textAlign="left">
             {defaultData.voltage} V
           </Text>
-          <Text position={[3, 1.2, 0]} color="white" fontSize={0.2} textAlign="left">
+          <Text position={[2, 1.1, 0]} color="white" fontSize={0.14} textAlign="left">
             {defaultData.current} A
           </Text>
-          <Text position={[3, 0.9, 0]} color="white" fontSize={0.2} textAlign="left">
+          <Text position={[2, 0.9, 0]} color="white" fontSize={0.14000000000000} textAlign="left">
             {defaultData.outputPower} W
           </Text>
         </XR>
