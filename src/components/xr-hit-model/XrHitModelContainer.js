@@ -6,7 +6,7 @@ import { Text } from "@react-three/drei";
 
 const XrHitModelContainer = () => {
   // Set default values for temperature, voltage, current, and output power using useState
-  const [defaultData, setDefaultData] = useState({
+  const [defaultData] = useState({
     temperature: 25,
     voltage: 120,
     current: 5,
