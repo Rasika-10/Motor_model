@@ -383,7 +383,7 @@ import { useThree } from "@react-three/fiber";
 import { Interactive, useHitTest, useXR } from "@react-three/xr";
 import { useRef, useState, useEffect } from "react";
 import Model from "./Model";
-import { Text, MeshDistortMaterial } from "@react-three/drei";
+import { Text } from "@react-three/drei";
 
 const XrHitModel = () => {
   const reticleRef = useRef();
@@ -446,44 +446,39 @@ const XrHitModel = () => {
             <group key={id} position={position}>
               <Model />
               {data && (
-                <group position={[0, 2, 0]} rotation={[0, -Math.PI / 2, 0]}> {/* Centered above the motor */}
+                <group position={[0, 2, 0]} rotation={[0, -Math.PI / 2, 0]}>
                   {/* Outer Border */}
                   <mesh>
-                    <boxGeometry args={[3, 1.2, 0.1]} />
-                    <meshBasicMaterial color="black" transparent opacity={0.5} />
+                    <boxGeometry args={[3.5, 1.5, 0.1]} />
+                    <meshStandardMaterial color="black" transparent opacity={0.5} />
                   </mesh>
+                  
                   {/* Text Labels and Values */}
-                  <Text
-                    position={[0, 0.6, 0]}
-                    color="white"
-                    fontSize={0.2}
-                    textAlign="center"
-                  >
-                    Temperature: {data?.temperature} °C
+                  <Text position={[0, 0.6, 0]} color="white" fontSize={0.2} textAlign="center">
+                    Temperature:
                   </Text>
-                  <Text
-                    position={[0, 0.3, 0]}
-                    color="white"
-                    fontSize={0.2}
-                    textAlign="center"
-                  >
-                    Voltage: {data?.voltage} V
+                  <Text position={[0, 0.3, 0]} color="white" fontSize={0.2} textAlign="center">
+                    Voltage:
                   </Text>
-                  <Text
-                    position={[0, 0, 0]}
-                    color="white"
-                    fontSize={0.2}
-                    textAlign="center"
-                  >
-                    Current: {data?.current} A
+                  <Text position={[0, 0, 0]} color="white" fontSize={0.2} textAlign="center">
+                    Current:
                   </Text>
-                  <Text
-                    position={[0, -0.3, 0]}
-                    color="white"
-                    fontSize={0.2}
-                    textAlign="center"
-                  >
-                    Output Power: {data?.outputPower} W
+                  <Text position={[0, -0.3, 0]} color="white" fontSize={0.2} textAlign="center">
+                    Output Power:
+                  </Text>
+
+                  {/* Values */}
+                  <Text position={[0, 0.6, 0]} color="white" fontSize={0.2} textAlign="center">
+                    {data?.temperature} °C
+                  </Text>
+                  <Text position={[0, 0.3, 0]} color="white" fontSize={0.2} textAlign="center">
+                    {data?.voltage} V
+                  </Text>
+                  <Text position={[0, 0, 0]} color="white" fontSize={0.2} textAlign="center">
+                    {data?.current} A
+                  </Text>
+                  <Text position={[0, -0.3, 0]} color="white" fontSize={0.2} textAlign="center">
+                    {data?.outputPower} W
                   </Text>
                 </group>
               )}
