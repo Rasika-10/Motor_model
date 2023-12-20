@@ -107,3 +107,7 @@ export default function Model(props) {
 }
 
 useGLTF.preload("/electric_motor.glb");
+
+
+
+
