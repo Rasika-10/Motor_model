@@ -72,7 +72,7 @@ const XrHitModel = () => {
                 <group position={[0, 2, 0]} rotation={[0, -Math.PI / 2, 0]}>
                   {/* Outer Border */}
                   <mesh>
-                    <boxGeometry args={[3.5, 1.7, 0.2]} />
+                    <boxGeometry args={[2.8, 1.2, 0.2]} />
                     <meshStandardMaterial color="black" transparent opacity={0.5} />
                   </mesh>
                   
