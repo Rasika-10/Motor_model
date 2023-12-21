@@ -6,7 +6,7 @@ import { Text } from "@react-three/drei";
 
 const XrHitModelContainer = () => {
   // Set default values for temperature, voltage, current, and output power using useState
-  const [defaultData] = useState({
+  const [defaultData                              ] = useState({
     temperature: 25,
     voltage: 120,
     current: 5,
@@ -24,6 +24,7 @@ const XrHitModelContainer = () => {
         <XR>
           {/* Add XrHitModel component with default data */}
           <XrHitModel defaultData={defaultData} />
+        
 
           {/* Add Text components for labels and values */}
           {/* Labels */}
@@ -53,6 +54,7 @@ const XrHitModelContainer = () => {
           <Text position={[0.5, 0.9, 0]} color="white" fontSize={0.14} textAlign="left">
             {defaultData.outputPower} W
           </Text>
+          
         </XR>
       </Canvas>
     </>
