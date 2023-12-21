@@ -67,13 +67,13 @@ const XrHitModel = () => {
               <Model />
               {data && (
                 <group position={[0, 2, 0]} rotation={[0, -Math.PI / 2, 0]}>
-                  {/* Outer Border */}
+                 
                   <mesh>
                     <boxGeometry args={[3, 1.5, 0.2]} />
                     <meshStandardMaterial color="black" transparent opacity={0.3} />
                   </mesh>
                   
-                  {/* Text Labels and Values */}
+                
                   <Text position={[0, 0.7, 0]} color="white" fontSize={0.2} textAlign="center">
                     Temperature:{data?.temperature} °C
                   </Text>
@@ -95,7 +95,7 @@ const XrHitModel = () => {
       {isPresenting && (
         <Interactive onSelect={placeModel}>
           <mesh ref={reticleRef} rotation-x={-Math.PI / 2}>
-            <ringGeometry args={[0.1, 0.25, 32]} />
+            <ringGeometry args={[0.1, 0.23, 32]} />
             <meshStandardMaterial color={"white"} />
           </mesh>
         </Interactive>
