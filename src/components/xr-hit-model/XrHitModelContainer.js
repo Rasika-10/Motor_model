@@ -24,7 +24,7 @@ const XrHitModelContainer = () => {
   const[data, setData]=useState([]);
   const[changer, setChanger]=useState(0);
   const [rt, setRT]=useState(0)
-  useEffect((data)=>{
+  useEffect(()=>{
     console.log('useEffect activated...')
     const fbase = () =>{
       console.log('fbase called...')
@@ -50,7 +50,7 @@ const XrHitModelContainer = () => {
     }
   fbase();
  
-},[changer]);
+},[changer,data]);
 
   return (
     <>
