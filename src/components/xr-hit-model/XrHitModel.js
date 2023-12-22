@@ -65,7 +65,7 @@ const XrHitModel = () => {
           return (
             <group key={id} position={position}>
               <Model />
-              {data && (
+              {/* {data && (
                 <group position={[0, 2, 0]} rotation={[0, -Math.PI / 2, 0]}>
                  
                   <mesh>
@@ -88,7 +88,7 @@ const XrHitModel = () => {
                   </Text>
 
                 </group>
-              )}
+              )} */}
             </group>
           );
         })}

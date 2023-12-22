@@ -63,7 +63,7 @@ const XrHitModelContainer = () => {
       <Canvas>
         <XR>
           {/* Add XrHitModel component with default data */}
-          <XrHitModel defaultData={defaultData} />
+          <XrHitModel  />
         
           <mesh onClick={() => {setRT(rt+1)}}>
           {/* Add Text components for labels and values */}
