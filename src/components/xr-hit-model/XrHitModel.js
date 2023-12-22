@@ -3,17 +3,17 @@ import { useThree } from "@react-three/fiber";
 import { Interactive, useHitTest, useXR } from "@react-three/xr";
 import { useRef, useState, useEffect } from "react";
 import Model from "./Model";
-import { Text } from "@react-three/drei";
+
 
 const XrHitModel = () => {
   const reticleRef = useRef();
   const [models, setModels] = useState([]);
-  const [data, setData] = useState({
-    temperature: 25,
-    voltage: 120,
-    current: 5,
-    outputPower: 600,
-  });
+  // const [data, setData] = useState({
+  //   temperature: 25,
+  //   voltage: 120,
+  //   current: 5,
+  //   outputPower: 600,
+  // });
 
   const { isPresenting } = useXR();
 
@@ -39,22 +39,22 @@ const XrHitModel = () => {
     setModels([{ position, id }]);
   };
 
-  useEffect(() => {
-    // Simulate fetching data from Firebase or other sources
-    const fetchData = async () => {
-      // For demonstration purposes, use a timeout to mimic an async operation
-      setTimeout(() => {
-        setData({
-          temperature: 25,
-          voltage: 120,
-          current: 5,
-          outputPower: 600,
-        });
-      }, 1000);
-    };
+  // useEffect(() => {
+  //   // Simulate fetching data from Firebase or other sources
+  //   const fetchData = async () => {
+  //     // For demonstration purposes, use a timeout to mimic an async operation
+  //     setTimeout(() => {
+  //       setData({
+  //         temperature: 25,
+  //         voltage: 120,
+  //         current: 5,
+  //         outputPower: 600,
+  //       });
+  //     }, 1000);
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   return (
     <>
