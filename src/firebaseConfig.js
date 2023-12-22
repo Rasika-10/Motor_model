@@ -4,14 +4,13 @@ import firebase from 'firebase/compat/app'
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAGdMqXN4bvaWfuy1-XAIEdcIgNEERbhMg",
-  authDomain: "appnew-232a9.firebaseapp.com",
-  databaseURL: "https://appnew-232a9-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "appnew-232a9",
-  storageBucket: "appnew-232a9.appspot.com",
-  messagingSenderId: "645814436166",
-  appId: "1:645814436166:web:dadf169ca110d1da74e547",
-  measurementId: "G-LSKNGQN3S4"
+  apiKey: "AIzaSyC4MDz3X6aFscHSYYUQJh2oBfjBPEy-lYU",
+  authDomain: "esp-demo-17ed1.firebaseapp.com",
+  databaseURL: "https://esp-demo-17ed1-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "esp-demo-17ed1",
+  storageBucket: "esp-demo-17ed1.appspot.com",
+  messagingSenderId: "265923535250",
+  appId: "1:265923535250:web:7c05882460f47b8682214b"
 }
 
 

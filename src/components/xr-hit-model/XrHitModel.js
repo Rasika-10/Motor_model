@@ -19,7 +19,7 @@ const XrHitModel = () => {
 
   useThree(({ camera }) => {
     if (!isPresenting) {
-      camera.position.z = 3;
+      camera.position.z = 2.7;
     }
   });
 
