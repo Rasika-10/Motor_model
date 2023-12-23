@@ -9,6 +9,8 @@ import { ref,onValue } from 'firebase/database'
 
 const XrHitModelContainer = () => {
   // Set default values for temperature, voltage, current, and output power using useState
+  
+  
   const [voltage, setVoltage]=useState('0');
   const [current, setCurrent]=useState('0');
   const [temperature, setTemperature]=useState('0');
